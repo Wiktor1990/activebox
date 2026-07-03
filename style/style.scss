@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font: "Raleway", sans-serif;
+$primary-color: #FFFFFF;
+$btn-bg: #FF4343;
+$text-color: #000000;
+$tablet: 1024px;
+$mobile: 767px;
+
+
+@mixin font($size, $line-height, $weight: 400) {
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $weight;
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font;
+    overflow-x: hidden;
+}
+
+.promo__wrapper {
+    background-image: url(../media/bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(37, 43, 73, 0.8);
+        position: absolute;
+        z-index: 1;
+    }
+
+}
+
+.header,
+.banner {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    padding: 38px 0 35px;
+    border-bottom: 1px solid #BABBC5;
+
+    @media screen and (max-width: $tablet) {
+        padding: 38px 36px;
+
+    }
+
+
+    @media screen and (max-width: $mobile) {
+        padding: 19px 0;
+        border-bottom: none;
+    }
+
+    &__toggle {
+        display: none;
+
+        @media screen and (max-width: $mobile) {
+            display: block;
+        }
+    }
+
+    svg {
+        width: 100%;
+    }
+
+    &__logo {
+        display: inline-block;
+        max-width: 183px;
+        width: 100%;
+    }
+
+    
+
+   
+
+
+    .nav {
+
+
+        &__list {
+            display: flex;
+            column-gap: 38px;
+            list-style-type: none;
+            text-transform: uppercase;
+
+            @include font (12px, 14px, 700);
+
+            @media screen and (max-width: $tablet) {
+                column-gap: 25px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                display: none;
+            }
+
+        }
+
+        &__link {
+            color: $primary-color;
+            text-decoration: none;
+
+        }
+
+
+    }
+}
+
+.banner {
+    display: flex;
+    text-align: center;
+    padding: 257px 0 126px;
+
+    @media screen and (max-width: $mobile) {
+        padding: 106px 0 52px;
+    }
+
+
+
+
+    &__title {
+        max-width: 984px;
+        margin-bottom: 61px;
+        text-transform: uppercase;
+        color: $primary-color;
+
+        @include font(48px, 56px, 900);
+
+        @media screen and (max-width: $mobile){
+            @include font(36px, 42px, 900);
+            margin-bottom: 40px;
+        }
+
+
+    }
+
+    &__subtitle {
+        max-width: 984px;
+        margin-bottom: 89px;
+        color: $primary-color;
+
+        @include font(18px, 100%);
+
+        @media screen and (max-width: $mobile) {
+            @include font(14px, 16px);
+            margin-bottom: 59px;
+        }
+
+    }
+
+    &__btn {
+        min-width: 314px;
+        padding: 30.5px;
+        text-transform: uppercase;
+        color: $primary-color;
+        margin-bottom: 126px;
+        border: none;
+        @include font(18px, 100%, 900);
+        background-color: $btn-bg;
+
+        @media screen and (max-width: $tablet) {
+            @include font(24px, 100%, 900);
+        }
+
+        @media screen and (max-width: $mobile){
+            min-width: 279px;
+            padding: 14px 46px 16px;
+            @include font(24px, 28px, 900);
+            margin-bottom: 52px;
+        }
+
+
+    }
+}
+
+
+.download {
+    text-align: center;
+    padding: 170px 0;
+
+    @media screen and (max-width: $tablet) {
+        padding: 127px 0;
+    }
+
+    @media screen and (max-width: $mobile){
+        padding: 53px 0;
+    }
+
+    &__title {
+        color: #000000;
+        margin-bottom: 22px;
+        @include font(30px, 35px, 500);
+
+
+        @media screen and (max-width: $tablet) {
+            margin-bottom: 20px;
+            @include font(24px, 28px, 500);
+        }
+
+        @media screen and (max-width: $mobile){
+            margin-bottom: 12px;
+            @include font(18px, 21px, 500);
+        }
+    }
+
+    &__subtitle {
+        color: #000000;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        @include font(18px, 21px, 700);
+
+        @media screen and (max-width: $tablet) {
+            margin-bottom: 45px;
+            @include font(14px, 16px, 700);
+        }
+
+        @media screen and (max-width: $mobile){
+            margin-bottom: 12px;
+            @include font(13px, 15px, 700);
+        }
+
+    }
+
+    &__btn {
+        min-width: 565px;
+        padding: 23px 79px 26px;
+        text-transform: uppercase;
+        color: $primary-color;
+        margin-bottom: 126px;
+        border: none;
+        @include font(24px, 28px, 900);
+        background-color: $btn-bg;
+
+        @media screen and (max-width: $tablet) {
+            padding: 27px 29px 139px;
+            @include font(18px, 21px, 900);
+            margin-bottom: 127px;
+
+        }
+
+        @media screen and (max-width: $mobile){
+            min-width: 280px;
+            padding: 28px 0;
+            @include font(18px, 21px, 900);
+            margin-bottom: 52px;
+        }
+    }
+}
