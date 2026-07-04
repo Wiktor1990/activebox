@@ -4,6 +4,7 @@ $font: "Raleway", sans-serif;
 $primary-color: #FFFFFF;
 $btn-bg: #FF4343;
 $text-color: #000000;
+$text-color-feature: #6C7279;
 $tablet: 1024px;
 $mobile: 767px;
 
@@ -101,9 +102,9 @@ body {
         width: 100%;
     }
 
-    
 
-   
+
+
 
 
     .nav {
@@ -157,7 +158,7 @@ body {
 
         @include font(48px, 56px, 900);
 
-        @media screen and (max-width: $mobile){
+        @media screen and (max-width: $mobile) {
             @include font(36px, 42px, 900);
             margin-bottom: 40px;
         }
@@ -193,7 +194,7 @@ body {
             @include font(24px, 100%, 900);
         }
 
-        @media screen and (max-width: $mobile){
+        @media screen and (max-width: $mobile) {
             min-width: 279px;
             padding: 14px 46px 16px;
             @include font(24px, 28px, 900);
@@ -213,7 +214,7 @@ body {
         padding: 127px 0;
     }
 
-    @media screen and (max-width: $mobile){
+    @media screen and (max-width: $mobile) {
         padding: 53px 0;
     }
 
@@ -228,7 +229,7 @@ body {
             @include font(24px, 28px, 500);
         }
 
-        @media screen and (max-width: $mobile){
+        @media screen and (max-width: $mobile) {
             margin-bottom: 12px;
             @include font(18px, 21px, 500);
         }
@@ -245,7 +246,7 @@ body {
             @include font(14px, 16px, 700);
         }
 
-        @media screen and (max-width: $mobile){
+        @media screen and (max-width: $mobile) {
             margin-bottom: 12px;
             @include font(13px, 15px, 700);
         }
@@ -269,11 +270,118 @@ body {
 
         }
 
-        @media screen and (max-width: $mobile){
+        @media screen and (max-width: $mobile) {
             min-width: 280px;
             padding: 28px 0;
             @include font(18px, 21px, 900);
             margin-bottom: 52px;
         }
     }
+}
+
+.features {
+    padding: 100px 0;
+    overflow: hidden;
+    text-align: center;
+
+    @media screen and (max-width: $tablet) {
+        padding: 80px 0;
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding: 59px 0;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 31px;
+        row-gap: 88px;
+        width: 100%;
+
+        @media screen and (max-width: $tablet) {
+            column-gap: 20px;
+            row-gap: 49px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            grid-template-columns: 1fr;
+            row-gap: 41px;
+        }
+    }
+
+    &__card {
+        aspect-ratio: 1/1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: $mobile) {
+            max-width: 278px;
+            max-height: 221px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 51px;
+
+        @media screen and (max-width: $tablet) {
+            margin-bottom: 43px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            margin-bottom: 37px;
+        }
+    }
+
+    svg {
+        width: 100px;
+        height: 100px;
+
+        @media screen and (max-width: $tablet) {
+            width: 85px;
+            height: 85px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 75px;
+            height: 75px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 42px;
+        @include font(24px, 28px, 900);
+        text-transform: uppercase;
+        color: $text-color;
+
+        @media screen and (max-width: $tablet) {
+            margin-bottom: 23px;
+            @include font(18px, 100%, 900);
+        }
+
+        @media screen and (max-width: $mobile) {
+            margin-bottom: 8px;
+            @include font(18px, 21px, 900);
+
+        }
+    }
+
+    &__subtitle {
+        @include font(18px, 21px);
+        color: $text-color-feature;
+
+        @media screen and (max-width: $tablet) {
+            @include font(14px, 100%);
+        }
+
+        @media screen and (max-width: $mobile) {
+            @include font(14px, 16px);
+        }
+    }
+
+
 }
