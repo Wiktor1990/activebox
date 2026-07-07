@@ -458,4 +458,51 @@ body {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
+}
+
+.teams {
+  padding: 100px 0;
+}
+.teams__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  width: 100%;
+}
+
+.team__card-image {
+  margin-bottom: 21px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.team__card-person {
+  color: #2D3033;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.team__card-position {
+  color: #FF4343;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+.team__card-bio {
+  color: #6C7279;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  margin-bottom: 37px;
+}
+.team__card-social {
+  list-style: none;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

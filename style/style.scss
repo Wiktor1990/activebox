@@ -7,6 +7,7 @@ $primary-color: #FFFFFF;
 $btn-bg: #FF4343;
 $text-color: #000000;
 $text-color-feature: #6C7279;
+$text-color-teams: #6C7279;
 $tablet: 1024px;
 $mobile: 767px;
 
@@ -463,3 +464,52 @@ body {
         @include font(14px, 16px);
     }
 }
+
+.teams{
+    padding: 100px 0;
+
+    &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    width: 100%;
+}
+}
+
+.team__card{
+
+    &-image{
+        margin-bottom: 21px;
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    &-person{
+        color: #2D3033;
+        @include font(24px, 28px, 700);
+        margin-bottom: 6px;
+    }
+
+    &-position{
+        color: #FF4343;
+        @include font(18px, 21px);
+        text-transform: uppercase;
+        margin-bottom: 17px;
+    }
+
+    &-bio{
+        color: $text-color-teams;
+        @include font(18px, 21px);
+        margin-bottom: 37px;
+    }
+
+    &-social{
+        list-style: none;
+        column-gap: 6px;
+        display: flex;
+
+    }
+    
+}
+
