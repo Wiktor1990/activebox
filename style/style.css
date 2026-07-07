@@ -40,19 +40,13 @@ body {
   padding: 0 15px;
 }
 
-.header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .header {
   padding: 38px 0 35px;
   border-bottom: 1px solid #BABBC5;
 }
 @media screen and (max-width: 1024px) {
   .header {
-    padding: 38px 36px;
+    padding: 38px 0 36px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -77,7 +71,13 @@ body {
   max-width: 183px;
   width: 100%;
 }
-.header .nav__list {
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
   display: flex;
   -moz-column-gap: 38px;
        column-gap: 38px;
@@ -88,25 +88,29 @@ body {
   font-weight: 700;
 }
 @media screen and (max-width: 1024px) {
-  .header .nav__list {
+  .nav__list {
     -moz-column-gap: 25px;
          column-gap: 25px;
   }
 }
 @media screen and (max-width: 767px) {
-  .header .nav__list {
+  .nav__list {
     display: none;
   }
 }
-.header .nav__link {
+.nav__link {
   color: #FFFFFF;
   text-decoration: none;
 }
 
 .banner {
-  display: flex;
   text-align: center;
-  padding: 257px 0 126px;
+  padding: 128px 0 120px;
+}
+@media screen and (max-width: 1024px) {
+  .banner {
+    padding: 157px 0 126px;
+  }
 }
 @media screen and (max-width: 767px) {
   .banner {
@@ -115,12 +119,21 @@ body {
 }
 .banner__title {
   max-width: 984px;
-  margin-bottom: 61px;
+  margin: 0 auto 61px;
   text-transform: uppercase;
   color: #FFFFFF;
-  font-size: 48px;
-  line-height: 56px;
+  margin-bottom: 31px;
+  font-size: 64px;
+  line-height: 75px;
   font-weight: 900;
+}
+@media screen and (max-width: 1024px) {
+  .banner__title {
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 900;
+    margin-bottom: 61px;
+  }
 }
 @media screen and (max-width: 767px) {
   .banner__title {
@@ -132,11 +145,20 @@ body {
 }
 .banner__subtitle {
   max-width: 984px;
-  margin-bottom: 89px;
+  margin: 0 auto 89px;
   color: #FFFFFF;
-  font-size: 18px;
-  line-height: 100%;
+  margin-bottom: 79px;
+  font-size: 24px;
+  line-height: 28px;
   font-weight: 400;
+}
+@media screen and (max-width: 1024px) {
+  .banner__subtitle {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    margin-bottom: 89px;
+  }
 }
 @media screen and (max-width: 767px) {
   .banner__subtitle {
@@ -151,7 +173,6 @@ body {
   padding: 30.5px;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-bottom: 126px;
   border: none;
   font-size: 18px;
   line-height: 100%;
@@ -172,7 +193,6 @@ body {
     font-size: 24px;
     line-height: 28px;
     font-weight: 900;
-    margin-bottom: 52px;
   }
 }
 
@@ -242,7 +262,6 @@ body {
   padding: 23px 79px 26px;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-bottom: 126px;
   border: none;
   font-size: 24px;
   line-height: 28px;
@@ -251,27 +270,21 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .download__btn {
-    padding: 27px 29px 139px;
+    padding: 27px 27px 29px;
     font-size: 18px;
     line-height: 21px;
     font-weight: 900;
-    margin-bottom: 127px;
   }
 }
 @media screen and (max-width: 767px) {
   .download__btn {
     min-width: 280px;
     padding: 28px 0;
-    font-size: 18px;
-    line-height: 21px;
-    font-weight: 900;
-    margin-bottom: 52px;
   }
 }
 
 .features {
   padding: 100px 0;
-  overflow: hidden;
   text-align: center;
 }
 @media screen and (max-width: 1024px) {
@@ -305,19 +318,9 @@ body {
     row-gap: 41px;
   }
 }
-.features__card {
-  aspect-ratio: 1/1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 @media screen and (max-width: 767px) {
   .features__card {
-    max-width: 278px;
-    max-height: 221px;
     width: 100%;
-    margin: 0 auto;
   }
 }
 .features__icon {
@@ -394,14 +397,12 @@ body {
   }
 }
 
-.projects {
-  padding: 1px 0;
-}
 .projects__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
-  width: 100%;
+  max-width: 100%;
+  padding: 0;
 }
 @media screen and (max-width: 767px) {
   .projects__container {
@@ -410,17 +411,17 @@ body {
 }
 
 .project {
-  aspect-ratio: 380/340;
+  aspect-ratio: 378/340;
   overflow: hidden;
   position: relative;
   width: 100%;
+  border: 2px solid #FFFFFF;
 }
 .project__image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 2px solid #FFFFFF;
 }
 .project__content {
   position: absolute;
@@ -433,16 +434,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 126px 0 128px;
+  padding: 10px;
   opacity: 0;
 }
 .project__content:hover {
   opacity: 1;
-}
-@media screen and (max-width: 1024px) {
-  .project__content {
-    padding: 84px 0 86px;
-  }
 }
 .project__title {
   color: #FFFFFF;

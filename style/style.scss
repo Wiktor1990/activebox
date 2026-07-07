@@ -65,18 +65,13 @@ body {
 
 }
 
-.header__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .header {
     padding: 38px 0 35px;
     border-bottom: 1px solid #BABBC5;
 
     @media screen and (max-width: $tablet) {
-        padding: 38px 36px;
+        padding: 38px 0 36px;
 
     }
 
@@ -105,11 +100,20 @@ body {
     }
 
 
+    &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
 
 
-    .nav {
+
+    
+}
+
+.nav {
 
 
         &__list {
@@ -138,12 +142,15 @@ body {
 
 
     }
-}
+
 
 .banner {
-    display: flex;
     text-align: center;
-    padding: 257px 0 126px;
+    padding: 128px 0 120px;
+
+    @media screen and (max-width: $tablet) {
+        padding: 157px 0 126px;
+    }
 
     @media screen and (max-width: $mobile) {
         padding: 106px 0 52px;
@@ -154,11 +161,17 @@ body {
 
     &__title {
         max-width: 984px;
-        margin-bottom: 61px;
+        margin: 0 auto 61px;
         text-transform: uppercase;
         color: $primary-color;
+        margin-bottom: 31px;
 
-        @include font(48px, 56px, 900);
+        @include font(64px, 75px, 900);
+
+        @media screen and (max-width: $tablet) {
+            @include font(48px, 56px, 900);
+            margin-bottom: 61px;
+        }
 
         @media screen and (max-width: $mobile) {
             @include font(36px, 42px, 900);
@@ -170,10 +183,16 @@ body {
 
     &__subtitle {
         max-width: 984px;
-        margin-bottom: 89px;
+        margin: 0 auto 89px;
         color: $primary-color;
+        margin-bottom: 79px;
 
-        @include font(18px, 100%);
+        @include font(24px, 28px);
+
+        @media screen and (max-width: $tablet) {
+            @include font(18px, 21px);
+            margin-bottom: 89px;
+        }
 
         @media screen and (max-width: $mobile) {
             @include font(14px, 16px);
@@ -187,7 +206,6 @@ body {
         padding: 30.5px;
         text-transform: uppercase;
         color: $primary-color;
-        margin-bottom: 126px;
         border: none;
         @include font(18px, 100%, 900);
         background-color: $btn-bg;
@@ -200,7 +218,6 @@ body {
             min-width: 279px;
             padding: 14px 46px 16px;
             @include font(24px, 28px, 900);
-            margin-bottom: 52px;
         }
 
 
@@ -260,30 +277,25 @@ body {
         padding: 23px 79px 26px;
         text-transform: uppercase;
         color: $primary-color;
-        margin-bottom: 126px;
         border: none;
         @include font(24px, 28px, 900);
         background-color: $btn-bg;
 
         @media screen and (max-width: $tablet) {
-            padding: 27px 29px 139px;
+            padding: 27px 27px 29px;
             @include font(18px, 21px, 900);
-            margin-bottom: 127px;
 
         }
 
         @media screen and (max-width: $mobile) {
             min-width: 280px;
             padding: 28px 0;
-            @include font(18px, 21px, 900);
-            margin-bottom: 52px;
         }
     }
 }
 
 .features {
     padding: 100px 0;
-    overflow: hidden;
     text-align: center;
 
     @media screen and (max-width: $tablet) {
@@ -313,17 +325,10 @@ body {
     }
 
     &__card {
-        aspect-ratio: 1/1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+       
 
         @media screen and (max-width: $mobile) {
-            max-width: 278px;
-            max-height: 221px;
             width: 100%;
-            margin: 0 auto;
         }
     }
 
@@ -389,13 +394,14 @@ body {
 }
 
 .projects{
-   padding: 1px 0;
+   
 
     &__container{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 0;
-        width: 100%;
+        max-width: 100%;
+        padding: 0;
 
 
         @media screen and (max-width: $mobile) {
@@ -405,16 +411,17 @@ body {
 }
 
 .project{
-    aspect-ratio: 380/340;
+    aspect-ratio: 378/340;
     overflow: hidden;
     position: relative;
     width: 100%;
+    border: 2px solid $primary-color;
 
     &__image{
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border: 2px solid $primary-color;
+        
     }
     
 
@@ -429,7 +436,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 126px 0 128px;
+        padding: 10px;
 
         opacity: 0;
 
@@ -437,9 +444,7 @@ body {
             opacity: 1;
         }
 
-        @media screen and (max-width: $tablet) {
-            padding: 84px 0 86px;
-        }
+        
     }
 
     &__title{
