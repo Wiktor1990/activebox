@@ -468,27 +468,62 @@ body {
 .teams{
     padding: 100px 0;
 
+    @media screen and (max-width: $tablet) {
+        
+        padding: 80px 0;
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding: 49px 0;
+}
+
     &__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
     width: 100%;
-}
+
+    @media screen and (max-width: $tablet) {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 24px;
+    }
+
+    @media screen and (max-width: $mobile) {
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+    
 }
 
 .team__card{
+ 
 
     &-image{
         margin-bottom: 21px;
         width: 100%;
         aspect-ratio: 1/1;
         object-fit: cover;
+        
+
+        @media screen and (max-width: $tablet) {
+            margin-bottom: 25px;
+            aspect-ratio: 227/227;
+        }
+
+        @media screen and (max-width: $mobile) {
+            aspect-ratio: 280/227;
+        }
     }
 
     &-person{
         color: #2D3033;
         @include font(24px, 28px, 700);
         margin-bottom: 6px;
+
+        @media screen and (max-width: $tablet) {
+            margin-bottom: 4px;
+            @include font(18px, 21px, 700);
+        }
     }
 
     &-position{
@@ -496,20 +531,42 @@ body {
         @include font(18px, 21px);
         text-transform: uppercase;
         margin-bottom: 17px;
+
+        @media screen and (max-width: $tablet) {
+            margin-bottom: 22px;
+            @include font(14px, 16px);
+        }
+
+        @media screen and (max-width: $mobile) {
+            margin-bottom: 38px;           
+        }
     }
 
     &-bio{
         color: $text-color-teams;
         @include font(18px, 21px);
         margin-bottom: 37px;
+
+        @media screen and (max-width: $tablet) {
+            margin-bottom: 39px;
+            @include font(14px, 16px);
+        }
+
+        @media screen and (max-width: $mobile) {
+            margin-bottom: 55px;
+        }
     }
 
     &-social{
         list-style: none;
         column-gap: 6px;
         display: flex;
-
+        
+       @media screen and (max-width: $mobile) {
+            margin-bottom: 49px;
+        }
     }
     
+}
 }
 

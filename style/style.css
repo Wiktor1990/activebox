@@ -463,6 +463,16 @@ body {
 .teams {
   padding: 100px 0;
 }
+@media screen and (max-width: 1024px) {
+  .teams {
+    padding: 80px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .teams {
+    padding: 49px 0;
+  }
+}
 .teams__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -470,22 +480,52 @@ body {
        column-gap: 30px;
   width: 100%;
 }
-
-.team__card-image {
+@media screen and (max-width: 1024px) {
+  .teams__container {
+    grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .teams__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.teams .team__card-image {
   margin-bottom: 21px;
   width: 100%;
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.team__card-person {
+@media screen and (max-width: 1024px) {
+  .teams .team__card-image {
+    margin-bottom: 25px;
+    aspect-ratio: 227/227;
+  }
+}
+@media screen and (max-width: 767px) {
+  .teams .team__card-image {
+    aspect-ratio: 280/227;
+  }
+}
+.teams .team__card-person {
   color: #2D3033;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   margin-bottom: 6px;
 }
-.team__card-position {
+@media screen and (max-width: 1024px) {
+  .teams .team__card-person {
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+  }
+}
+.teams .team__card-position {
   color: #FF4343;
   font-size: 18px;
   line-height: 21px;
@@ -493,16 +533,47 @@ body {
   text-transform: uppercase;
   margin-bottom: 17px;
 }
-.team__card-bio {
+@media screen and (max-width: 1024px) {
+  .teams .team__card-position {
+    margin-bottom: 22px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 767px) {
+  .teams .team__card-position {
+    margin-bottom: 38px;
+  }
+}
+.teams .team__card-bio {
   color: #6C7279;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
   margin-bottom: 37px;
 }
-.team__card-social {
+@media screen and (max-width: 1024px) {
+  .teams .team__card-bio {
+    margin-bottom: 39px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 767px) {
+  .teams .team__card-bio {
+    margin-bottom: 55px;
+  }
+}
+.teams .team__card-social {
   list-style: none;
   -moz-column-gap: 6px;
        column-gap: 6px;
   display: flex;
+}
+@media screen and (max-width: 767px) {
+  .teams .team__card-social {
+    margin-bottom: 49px;
+  }
 }/*# sourceMappingURL=style.css.map */
