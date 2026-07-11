@@ -71,6 +71,11 @@ body {
   max-width: 183px;
   width: 100%;
 }
+@media screen and (max-width: 767px) {
+  .header__logo {
+    max-width: 109px;
+  }
+}
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -83,9 +88,6 @@ body {
        column-gap: 38px;
   list-style-type: none;
   text-transform: uppercase;
-  font-size: 12px;
-  line-height: 14px;
-  font-weight: 700;
 }
 @media screen and (max-width: 1024px) {
   .nav__list {
@@ -101,6 +103,9 @@ body {
 .nav__link {
   color: #FFFFFF;
   text-decoration: none;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
 }
 
 .banner {
@@ -174,25 +179,15 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
   border: none;
-  font-size: 18px;
-  line-height: 100%;
+  font-size: 24px;
+  line-height: 28px;
   font-weight: 900;
   background-color: #FF4343;
-}
-@media screen and (max-width: 1024px) {
-  .banner__btn {
-    font-size: 24px;
-    line-height: 100%;
-    font-weight: 900;
-  }
 }
 @media screen and (max-width: 767px) {
   .banner__btn {
     min-width: 279px;
     padding: 14px 46px 16px;
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 900;
   }
 }
 
@@ -443,10 +438,18 @@ body {
 .project__title {
   color: #FFFFFF;
   margin-bottom: 22px;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 24px;
+  line-height: 28px;
   font-weight: 900;
   text-transform: uppercase;
+}
+@media screen and (max-width: 1024px) {
+  .project__title {
+    margin-bottom: 22px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 900;
+  }
 }
 @media screen and (max-width: 767px) {
   .project__title {
@@ -490,6 +493,7 @@ body {
 @media screen and (max-width: 767px) {
   .teams__container {
     grid-template-columns: repeat(1, 1fr);
+    row-gap: 56px;
   }
 }
 .teams .team__card-image {
@@ -502,7 +506,6 @@ body {
 @media screen and (max-width: 1024px) {
   .teams .team__card-image {
     margin-bottom: 25px;
-    aspect-ratio: 227/227;
   }
 }
 @media screen and (max-width: 767px) {
@@ -572,8 +575,200 @@ body {
        column-gap: 6px;
   display: flex;
 }
-@media screen and (max-width: 767px) {
-  .teams .team__card-social {
-    margin-bottom: 49px;
+.teams .team__card-link {
+  border: 1px solid #C6CBCD;
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+  transition: all 0.3s linear;
+}
+.teams .team__card-link path {
+  transition: fill 0.3s linear;
+}
+.teams .team__card-link:hover {
+  border-color: blue;
+}
+.teams .team__card-link:hover path {
+  fill: red;
+}
+@media screen and (max-width: 1024px) {
+  .teams .team__card-link {
+    width: 32px;
+    height: 32px;
   }
+}
+@media screen and (max-width: 767px) {
+  .teams .team__card-link {
+    width: 39px;
+    height: 39px;
+  }
+}
+
+.footer {
+  padding: 71px 0;
+  background-color: #353C65;
+}
+@media screen and (max-width: 1024px) {
+  .footer {
+    padding: 46px 0 41px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 34px 0 33px;
+  }
+}
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .footer__container {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 69px;
+  }
+}
+.footer__title {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 29px;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 1024px) {
+  .footer__title {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    padding-bottom: 17px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__title {
+    padding-bottom: 34px;
+  }
+}
+.footer__text {
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 1024px) {
+  .footer__text {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+}
+.footer__info-social {
+  text-align: center;
+}
+.footer__title-social {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #FFFFFF;
+  padding-bottom: 48px;
+}
+@media screen and (max-width: 1024px) {
+  .footer__title-social {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    padding-bottom: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__title-social {
+    padding-bottom: 36px;
+  }
+}
+.footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 27px;
+       column-gap: 27px;
+}
+@media screen and (max-width: 1024px) {
+  .footer__social {
+    -moz-column-gap: 23px;
+         column-gap: 23px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__social {
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+  }
+}
+.footer__social-link {
+  border: 1px solid #C6CBCD;
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 6px;
+  column-gap: 6px;
+  transition: all 0.3s linear;
+}
+@media screen and (max-width: 1024px) {
+  .footer__social-link {
+    width: 33px;
+    height: 33px;
+  }
+}
+
+.footer__bottom {
+  padding: 24px 0;
+  background-color: #2C3154;
+}
+@media screen and (max-width: 1024px) {
+  .footer__bottom {
+    padding: 14px 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .footer__bottom {
+    padding: 29px 0 28px;
+  }
+}
+.footer__bottom-container {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.footer__bottom-text {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #808080;
+}
+@media screen and (max-width: 1024px) {
+  .footer__bottom-text {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+}
+.footer__bottom span {
+  color: white;
 }/*# sourceMappingURL=style.css.map */

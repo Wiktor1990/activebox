@@ -2,6 +2,8 @@
 
 
 $bg-project: rgba(255, 67, 67, 0.8);
+$gb-color-topfooter: #353C65;
+$gb-color-copyright: #2C3154;
 $font: "Raleway", sans-serif;
 $primary-color: #FFFFFF;
 $btn-bg: #FF4343;
@@ -98,51 +100,58 @@ body {
         display: inline-block;
         max-width: 183px;
         width: 100%;
+
+        @media screen and (max-width: $mobile) {
+            max-width: 109px;
+        }
     }
 
 
     &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
 
 
 
 
-    
+
 }
 
 .nav {
 
+    &__list {
+        display: flex;
+        column-gap: 38px;
+        list-style-type: none;
+        text-transform: uppercase;
 
-        &__list {
-            display: flex;
-            column-gap: 38px;
-            list-style-type: none;
-            text-transform: uppercase;
 
-            @include font (12px, 14px, 700);
 
-            @media screen and (max-width: $tablet) {
-                column-gap: 25px;
-            }
 
-            @media screen and (max-width: $mobile) {
-                display: none;
-            }
-
+        @media screen and (max-width: $tablet) {
+            column-gap: 25px;
         }
 
-        &__link {
-            color: $primary-color;
-            text-decoration: none;
-
+        @media screen and (max-width: $mobile) {
+            display: none;
         }
+
 
 
     }
+
+    &__link {
+        color: $primary-color;
+        text-decoration: none;
+        @include font (12px, 14px, 700);
+
+    }
+
+
+}
 
 
 .banner {
@@ -208,17 +217,14 @@ body {
         text-transform: uppercase;
         color: $primary-color;
         border: none;
-        @include font(18px, 100%, 900);
+        @include font(24px, 28px, 900);
         background-color: $btn-bg;
 
-        @media screen and (max-width: $tablet) {
-            @include font(24px, 100%, 900);
-        }
+
 
         @media screen and (max-width: $mobile) {
             min-width: 279px;
             padding: 14px 46px 16px;
-            @include font(24px, 28px, 900);
         }
 
 
@@ -295,6 +301,7 @@ body {
     }
 }
 
+
 .features {
     padding: 100px 0;
     text-align: center;
@@ -326,7 +333,7 @@ body {
     }
 
     &__card {
-       
+
 
         @media screen and (max-width: $mobile) {
             width: 100%;
@@ -338,10 +345,12 @@ body {
 
         @media screen and (max-width: $tablet) {
             margin-bottom: 43px;
+
         }
 
         @media screen and (max-width: $mobile) {
             margin-bottom: 37px;
+
         }
     }
 
@@ -394,10 +403,12 @@ body {
 
 }
 
-.projects{
-   
 
-    &__container{
+
+.projects {
+
+
+    &__container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 0;
@@ -411,22 +422,22 @@ body {
     }
 }
 
-.project{
+.project {
     aspect-ratio: 378/340;
     overflow: hidden;
     position: relative;
     width: 100%;
     border: 2px solid $primary-color;
 
-    &__image{
+    &__image {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        
-    }
-    
 
-    &__content{
+    }
+
+
+    &__content {
         position: absolute;
         top: 0;
         left: 0;
@@ -441,132 +452,314 @@ body {
 
         opacity: 0;
 
-        &:hover{
+        &:hover {
             opacity: 1;
         }
 
-        
+
     }
 
-    &__title{
-        color:$primary-color;
+    &__title {
+        color: $primary-color;
         margin-bottom: 22px;
-        @include font(18px, 21px, 900);
+        @include font(24px, 28px, 900);
         text-transform: uppercase;
+
+        @media screen and (max-width: $tablet) {
+            margin-bottom: 22px;
+            @include font(18px, 21px, 900);
+        }
 
         @media screen and (max-width: $mobile) {
             margin-bottom: 7px;
         }
     }
 
-    &__text{
-        color:$primary-color;
+    &__text {
+        color: $primary-color;
         @include font(14px, 16px);
     }
 }
 
-.teams{
+.teams {
     padding: 100px 0;
 
     @media screen and (max-width: $tablet) {
-        
+
         padding: 80px 0;
     }
 
     @media screen and (max-width: $mobile) {
         padding: 49px 0;
-}
+    }
 
     &__container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 30px;
-    width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 30px;
+        width: 100%;
+
+        @media screen and (max-width: $tablet) {
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 24px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 56px;
+
+        }
+
+    }
+
+    .team__card {
+
+
+        &-image {
+            margin-bottom: 21px;
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+
+
+            @media screen and (max-width: $tablet) {
+                margin-bottom: 25px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                aspect-ratio: 280/227;
+            }
+        }
+
+        &-person {
+            color: #2D3033;
+            @include font(24px, 28px, 700);
+            margin-bottom: 6px;
+
+            @media screen and (max-width: $tablet) {
+                margin-bottom: 4px;
+                @include font(18px, 21px, 700);
+            }
+        }
+
+        &-position {
+            color: #FF4343;
+            @include font(18px, 21px);
+            text-transform: uppercase;
+            margin-bottom: 17px;
+
+            @media screen and (max-width: $tablet) {
+                margin-bottom: 22px;
+                @include font(14px, 16px);
+            }
+
+            @media screen and (max-width: $mobile) {
+                margin-bottom: 38px;
+            }
+        }
+
+        &-bio {
+            color: $text-color-teams;
+            @include font(18px, 21px);
+            margin-bottom: 37px;
+
+            @media screen and (max-width: $tablet) {
+                margin-bottom: 39px;
+                @include font(14px, 16px);
+            }
+
+            @media screen and (max-width: $mobile) {
+                margin-bottom: 55px;
+            }
+        }
+
+        &-social {
+            list-style: none;
+            column-gap: 6px;
+            display: flex;
+
+
+        }
+
+        &-link {
+            border: 1px solid #C6CBCD;
+            width: 39px;
+            height: 39px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 6px;
+            transition: all .3s linear;
+
+            path {
+                transition: fill .3s linear;
+            }
+
+            &:hover {
+                border-color: blue;
+
+                path {
+                    fill: red
+                }
+
+            }
+
+            @media screen and (max-width: $tablet) {
+                width: 32px;
+                height: 32px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                width: 39px;
+                height: 39px;
+            }
+
+        }
+    }
+}
+
+.footer {
+    padding: 71px 0;
+    background-color: $gb-color-topfooter;
 
     @media screen and (max-width: $tablet) {
-        grid-template-columns: repeat(4, 1fr);
-        column-gap: 24px;
+        padding: 46px 0 41px;
     }
 
     @media screen and (max-width: $mobile) {
+        padding: 34px 0 33px;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+        text-align: center;
+
+        @media screen and (max-width: $tablet) {
+            column-gap: 20px;
+        }
+
+        @media screen and (max-width: $mobile) {
         grid-template-columns: repeat(1, 1fr);
-        
-    }
-    
-}
-
-.team__card{
- 
-
-    &-image{
-        margin-bottom: 21px;
-        width: 100%;
-        aspect-ratio: 1/1;
-        object-fit: cover;
-        
-
-        @media screen and (max-width: $tablet) {
-            margin-bottom: 25px;
-            aspect-ratio: 227/227;
-        }
-
-        @media screen and (max-width: $mobile) {
-            aspect-ratio: 280/227;
+                row-gap: 69px;
         }
     }
 
-    &-person{
-        color: #2D3033;
-        @include font(24px, 28px, 700);
-        margin-bottom: 6px;
 
-        @media screen and (max-width: $tablet) {
-            margin-bottom: 4px;
-            @include font(18px, 21px, 700);
-        }
-    }
 
-    &-position{
-        color: #FF4343;
-        @include font(18px, 21px);
+    &__title {
+        @include font(18px, 21px, 700);
         text-transform: uppercase;
-        margin-bottom: 17px;
+        padding-bottom: 29px;
+        color: $primary-color;
 
         @media screen and (max-width: $tablet) {
-            margin-bottom: 22px;
-            @include font(14px, 16px);
+            @include font(14px, 16px, 700);
+            padding-bottom: 17px;
         }
 
         @media screen and (max-width: $mobile) {
-            margin-bottom: 38px;           
+        padding-bottom: 34px;
         }
+
     }
 
-    &-bio{
-        color: $text-color-teams;
+    &__text {
+        color: $primary-color;
         @include font(18px, 21px);
-        margin-bottom: 37px;
+        text-transform: capitalize;
 
         @media screen and (max-width: $tablet) {
-            margin-bottom: 39px;
             @include font(14px, 16px);
         }
 
+    }
+
+    &__info-social {
+        text-align: center;
+    }
+
+    &__title-social {
+        text-transform: uppercase;
+        @include font(18px, 21px, 700);
+        color: $primary-color;
+        padding-bottom: 48px;
+
+        @media screen and (max-width: $tablet) {
+            @include font(14px, 16px, 700);
+            padding-bottom: 32px;
+        }
+
         @media screen and (max-width: $mobile) {
-            margin-bottom: 55px;
+        padding-bottom: 36px;
         }
+
     }
 
-    &-social{
-        list-style: none;
-        column-gap: 6px;
+    &__social {
         display: flex;
-        
-       @media screen and (max-width: $mobile) {
-            margin-bottom: 49px;
+        justify-content: center;
+        align-items: center;
+        column-gap: 27px;
+
+        @media screen and (max-width: $tablet) {
+            column-gap: 23px;
+        }
+
+        @media screen and (max-width: $mobile) {
+        column-gap: 16px;
         }
     }
-    
-}
+
+
+    &__social-link {
+        border: 1px solid #C6CBCD;
+        width: 39px;
+        height: 39px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -moz-column-gap: 6px;
+        column-gap: 6px;
+        transition: all 0.3s linear;
+
+        @media screen and (max-width: $tablet) {
+            width: 33px;
+            height: 33px;
+        }
+
+    }
 }
 
+.footer__bottom{
+    padding: 24px 0;
+    background-color: #2C3154;
+
+    @media screen and (max-width: $tablet) {
+        padding: 14px 0;
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 29px 0 28px;
+    }
+
+    &-container{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    &-text{
+        @include font(18px,21px);
+        color: #808080;
+
+        @media screen and (max-width: $tablet) {
+        @include font(14px,16px)
+    }
+    }
+
+    span{
+        color: #ffff;
+    }
+}
