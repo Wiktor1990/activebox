@@ -473,58 +473,50 @@
             </div>
         </div>
     </div>
-
+    
+<div class="reviews__wrapper">
     <div class="reviews">
         <div class="container reviews__container">
             <div class="swiper myreviewSwiper">
                 <div class="swiper-wrapper ">
                     <div class="swiper-slide review__item ">
-                        <img class="swiper__image"
+                        <img class="review__image"
                             src="https://img.magnific.com/premium-photo/it-professional-using-smartphone-with-futuristic-icons-laptop_1006743-1350.jpg?semt=ais_hybrid&w=740&q=80"
                             alt="">
                         <div class="review__content ">
-                            <h2 class="review__title">“Integer posuere erat a ante venenatis dapibus posuere velit
-                                aliquet. Donec sed odio dui. Aenean eu leo quam...”</h2>
+                            <h3 class="review__title">“Integer posuere erat a ante venenatis dapibus posuere velit
+                                aliquet. Donec sed odio dui. Aenean eu leo quam...”</h3>
                             <p class="review__position">Susan Sims, Interaction Designer at XYZ</p>
                         </div>
                     </div>
                     <div class="swiper-slide review__item ">
-                        <img class="swiper__image"
+                        <img class="review__image"
                             src="https://media.istockphoto.com/id/1344939844/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B4%D0%B5%D1%80%D0%B6%D0%B0-%D0%B2-%D1%80%D1%83%D0%BA%D0%B5-%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E-%D0%BB%D0%B0%D0%BC%D0%BF%D0%BE%D1%87%D0%BA%D1%83-%D1%81-%D0%BC%D0%BE%D0%B7%D0%B3%D0%BE%D0%BC-%D0%BD%D0%B0-%D1%84%D0%BE%D0%BD%D0%B5-%D0%B1%D0%BE%D0%BA%D0%B5-%D0%B4%D0%BB%D1%8F-%D1%82%D0%B2%D0%BE%D1%80%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE-%D0%B8-%D1%83%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B8%D0%B4%D0%B5%D0%B8.jpg?s=612x612&w=0&k=20&c=cybpzY8t4l51O0qykxrrAw_O6sKgdIao3Y24-f7whUU="
                             alt="">
                         <div class="review__content ">
-                            <h2 class="review__title">“Integer posuere erat a ante venenatis dapibus posuere velit
-                                aliquet. Donec sed odio dui. Aenean eu leo quam...”</h2>
+                            <h3 class="review__title">“Integer posuere erat a ante venenatis dapibus posuere velit
+                                aliquet. Donec sed odio dui. Aenean eu leo quam...”</h3>
                             <p class="review__position">Susan Sims, Interaction Designer at XYZ</p>
                         </div>
                     </div>
                     <div class="swiper-slide review__item ">
-                        <img class="swiper__image"
+                        <img class="review__image"
                             src="https://itvdn.blob.core.windows.net/mail-delivery/mail-delivery-9dddb699-3a9a-4944-9f23-3e002b08d8df.png"
                             alt="">
                         <div class="review__content ">
-                            <h2 class="review__title">“Integer posuere erat a ante venenatis dapibus posuere velit
-                                aliquet. Donec sed odio dui. Aenean eu leo quam...”</h2>
+                            <h3 class="review__title">“Integer posuere erat a ante venenatis dapibus posuere velit
+                                aliquet. Donec sed odio dui. Aenean eu leo quam...”</h3>
                             <p class="review__position">Susan Sims, Interaction Designer at XYZ</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="swiper-pagination"></div>
+    </div>
+ <div class="swiper-pagination"></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
-
-    <script>
-        var swiper = new Swiper('.myreviewSwiper', {
-            pagination: {
-                el: '.swiper-pagination',
-            },
-        });
-    </script>
-
-
+    
     <section class="download">
         <div class="container download__container">
             <h2 class="download__title">Are You Ready to Start? Download Now For Free!</h2>
@@ -578,17 +570,27 @@
             </div>
 
         </div>
-    </footer>
 
-    <footer class="footer__bottom">
+        <div class="footer__bottom">
         <div class="container  footer__bottom-container">
-            <div class="footer__bottom-copyright">
-                <p class="footer__bottom-text">Copyright © 2015 ActiveBox. All Rights<br> Reserved
-                    Made with <span>By Kamal Chaneman</span> </p>
-            </div>
+            <p class="footer__bottom-text">Copyright © 2015 ActiveBox. All Rights<br> Reserved
+                Made with <span>By Kamal Chaneman</span> </p>
+        </div>
         </div>
     </footer>
 
+    
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.myreviewSwiper', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
 
 </body>
 

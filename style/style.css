@@ -496,7 +496,8 @@ body {
     row-gap: 56px;
   }
 }
-.teams .team__card-image {
+
+.team__card-image {
   margin-bottom: 21px;
   width: 100%;
   aspect-ratio: 1/1;
@@ -504,16 +505,16 @@ body {
      object-fit: cover;
 }
 @media screen and (max-width: 1024px) {
-  .teams .team__card-image {
+  .team__card-image {
     margin-bottom: 25px;
   }
 }
 @media screen and (max-width: 767px) {
-  .teams .team__card-image {
+  .team__card-image {
     aspect-ratio: 280/227;
   }
 }
-.teams .team__card-person {
+.team__card-person {
   color: #2D3033;
   font-size: 24px;
   line-height: 28px;
@@ -521,14 +522,14 @@ body {
   margin-bottom: 6px;
 }
 @media screen and (max-width: 1024px) {
-  .teams .team__card-person {
+  .team__card-person {
     margin-bottom: 4px;
     font-size: 18px;
     line-height: 21px;
     font-weight: 700;
   }
 }
-.teams .team__card-position {
+.team__card-position {
   color: #FF4343;
   font-size: 18px;
   line-height: 21px;
@@ -537,7 +538,7 @@ body {
   margin-bottom: 17px;
 }
 @media screen and (max-width: 1024px) {
-  .teams .team__card-position {
+  .team__card-position {
     margin-bottom: 22px;
     font-size: 14px;
     line-height: 16px;
@@ -545,11 +546,11 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
-  .teams .team__card-position {
+  .team__card-position {
     margin-bottom: 38px;
   }
 }
-.teams .team__card-bio {
+.team__card-bio {
   color: #6C7279;
   font-size: 18px;
   line-height: 21px;
@@ -557,7 +558,7 @@ body {
   margin-bottom: 37px;
 }
 @media screen and (max-width: 1024px) {
-  .teams .team__card-bio {
+  .team__card-bio {
     margin-bottom: 39px;
     font-size: 14px;
     line-height: 16px;
@@ -565,17 +566,17 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
-  .teams .team__card-bio {
+  .team__card-bio {
     margin-bottom: 55px;
   }
 }
-.teams .team__card-social {
+.team__card-social {
   list-style: none;
   -moz-column-gap: 6px;
        column-gap: 6px;
   display: flex;
 }
-.teams .team__card-link {
+.team__card-link {
   border: 1px solid #C6CBCD;
   width: 39px;
   height: 39px;
@@ -586,30 +587,30 @@ body {
        column-gap: 6px;
   transition: all 0.3s linear;
 }
-.teams .team__card-link path {
+.team__card-link path {
   transition: fill 0.3s linear;
 }
-.teams .team__card-link:hover {
+.team__card-link:hover {
   border-color: blue;
 }
-.teams .team__card-link:hover path {
+.team__card-link:hover path {
   fill: red;
 }
 @media screen and (max-width: 1024px) {
-  .teams .team__card-link {
+  .team__card-link {
     width: 32px;
     height: 32px;
   }
 }
 @media screen and (max-width: 767px) {
-  .teams .team__card-link {
+  .team__card-link {
     width: 39px;
     height: 39px;
   }
 }
 
 .footer {
-  padding: 71px 0;
+  padding: 71px 0 0 0;
   background-color: #353C65;
 }
 @media screen and (max-width: 1024px) {
@@ -646,7 +647,7 @@ body {
   line-height: 21px;
   font-weight: 700;
   text-transform: uppercase;
-  padding-bottom: 29px;
+  margin-bottom: 29px;
   color: #FFFFFF;
 }
 @media screen and (max-width: 1024px) {
@@ -654,12 +655,12 @@ body {
     font-size: 14px;
     line-height: 16px;
     font-weight: 700;
-    padding-bottom: 17px;
+    margin-bottom: 17px;
   }
 }
 @media screen and (max-width: 767px) {
   .footer__title {
-    padding-bottom: 34px;
+    margin-bottom: 34px;
   }
 }
 .footer__text {
@@ -685,19 +686,19 @@ body {
   line-height: 21px;
   font-weight: 700;
   color: #FFFFFF;
-  padding-bottom: 48px;
+  margin-bottom: 48px;
 }
 @media screen and (max-width: 1024px) {
   .footer__title-social {
     font-size: 14px;
     line-height: 16px;
     font-weight: 700;
-    padding-bottom: 32px;
+    margin-bottom: 32px;
   }
 }
 @media screen and (max-width: 767px) {
   .footer__title-social {
-    padding-bottom: 36px;
+    margin-bottom: 36px;
   }
 }
 .footer__social {
@@ -730,46 +731,55 @@ body {
   column-gap: 6px;
   transition: all 0.3s linear;
 }
+.footer__social-link path {
+  transition: fill 0.3s linear;
+}
+.footer__social-link:hover {
+  border-color: blue;
+}
+.footer__social-link:hover path {
+  fill: red;
+}
 @media screen and (max-width: 1024px) {
   .footer__social-link {
     width: 33px;
     height: 33px;
   }
 }
-
-.footer__bottom {
+.footer .footer__bottom {
   padding: 24px 0;
   background-color: #2C3154;
+  margin-top: 71px;
 }
 @media screen and (max-width: 1024px) {
-  .footer__bottom {
+  .footer .footer__bottom {
     padding: 14px 0;
   }
 }
 @media screen and (max-width: 1024px) {
-  .footer__bottom {
+  .footer .footer__bottom {
     padding: 29px 0 28px;
   }
 }
-.footer__bottom-container {
+.footer .footer__bottom-container {
   align-items: center;
   text-align: center;
   justify-content: center;
 }
-.footer__bottom-text {
+.footer .footer__bottom-text {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
   color: #808080;
 }
 @media screen and (max-width: 1024px) {
-  .footer__bottom-text {
+  .footer .footer__bottom-text {
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
   }
 }
-.footer__bottom span {
+.footer .footer__bottom span {
   color: white;
 }
 
@@ -790,38 +800,34 @@ body {
     padding: 0 20px;
   }
 }
-.reviews .swiper__image {
+
+.review__image {
   width: 100%;
   aspect-ratio: 570/490;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media screen and (max-width: 1024px) {
-  .reviews .swiper__image {
+  .review__image {
     aspect-ratio: 483/332;
   }
 }
 @media screen and (max-width: 767px) {
-  .reviews .swiper__image {
+  .review__image {
     aspect-ratio: 280/218;
     align-items: center;
   }
 }
-.reviews .review__content {
-  padding: 116px 0 144px;
+.review__content {
+  padding: 40px 0;
   text-align: left;
 }
-@media screen and (max-width: 1024px) {
-  .reviews .review__content {
-    padding: 110px 0 103px;
-  }
-}
 @media screen and (max-width: 767px) {
-  .reviews .review__content {
+  .review__content {
     padding: 25px 17px 95px;
   }
 }
-.reviews .review__title {
+.review__title {
   width: 100%;
   max-width: 570px;
   font-style: italic;
@@ -830,21 +836,23 @@ body {
   line-height: 49px;
   font-weight: 400;
   text-transform: capitalize;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 1024px) {
-  .reviews .review__title {
+  .review__title {
     font-size: 24px;
     line-height: 32px;
     font-weight: 400;
+    margin-bottom: 8px;
   }
 }
 @media screen and (max-width: 767px) {
-  .reviews .review__title {
+  .review__title {
     text-align: center;
     margin-bottom: 15px;
   }
 }
-.reviews .review__position {
+.review__position {
   color: #FFFFFF;
   font-size: 13px;
   line-height: 15px;
@@ -852,18 +860,19 @@ body {
   text-transform: uppercase;
 }
 @media screen and (max-width: 1024px) {
-  .reviews .review__position {
+  .review__position {
     font-size: 12px;
     line-height: 14px;
     font-weight: 700;
   }
 }
 @media screen and (max-width: 767px) {
-  .reviews .review__position {
+  .review__position {
     text-align: center;
   }
 }
-.reviews .swiper-pagination {
+
+.swiper-pagination {
   position: static !important;
   display: flex !important;
   justify-content: center !important;
@@ -873,21 +882,26 @@ body {
   padding-top: 31px;
 }
 @media screen and (max-width: 1024px) {
-  .reviews .swiper-pagination {
+  .swiper-pagination {
     padding-top: 24px;
   }
 }
-.reviews .swiper-pagination-bullet {
+
+.swiper-pagination-bullet {
   width: 14px;
   height: 14px;
   margin: 0 !important;
-  background-color: #7E5D6F;
+  background-color: transparent;
   opacity: 1;
   transition: all 0.3s linear;
+  border: 1px solid #7E5D6F;
 }
 @media screen and (max-width: 1024px) {
-  .reviews .swiper-pagination-bullet {
+  .swiper-pagination-bullet {
     width: 9px;
     height: 9px;
   }
+}
+.swiper-pagination-bullet-active {
+  background-color: #7E5D6F;
 }/*# sourceMappingURL=style.css.map */

@@ -511,7 +511,12 @@ body {
 
     }
 
-    .team__card {
+   
+}
+
+.team{
+
+ &__card {
 
 
         &-image {
@@ -618,7 +623,7 @@ body {
 }
 
 .footer {
-    padding: 71px 0;
+    padding: 71px 0 0 0;
     background-color: $gb-color-topfooter;
 
     @media screen and (max-width: $tablet) {
@@ -650,16 +655,16 @@ body {
     &__title {
         @include font(18px, 21px, 700);
         text-transform: uppercase;
-        padding-bottom: 29px;
+        margin-bottom: 29px;
         color: $primary-color;
 
         @media screen and (max-width: $tablet) {
             @include font(14px, 16px, 700);
-            padding-bottom: 17px;
+            margin-bottom: 17px;
         }
 
         @media screen and (max-width: $mobile) {
-            padding-bottom: 34px;
+            margin-bottom: 34px;
         }
 
     }
@@ -683,15 +688,15 @@ body {
         text-transform: uppercase;
         @include font(18px, 21px, 700);
         color: $primary-color;
-        padding-bottom: 48px;
+        margin-bottom: 48px;
 
         @media screen and (max-width: $tablet) {
             @include font(14px, 16px, 700);
-            padding-bottom: 32px;
+            margin-bottom: 32px;
         }
 
         @media screen and (max-width: $mobile) {
-            padding-bottom: 36px;
+            margin-bottom: 36px;
         }
 
     }
@@ -701,7 +706,7 @@ body {
         justify-content: center;
         align-items: center;
         column-gap: 27px;
-
+        
         @media screen and (max-width: $tablet) {
             column-gap: 23px;
         }
@@ -721,7 +726,23 @@ body {
         justify-content: center;
         -moz-column-gap: 6px;
         column-gap: 6px;
-        transition: all 0.3s linear;
+        transition: all .3s linear;
+
+        path {
+                transition: fill .3s linear;
+            }
+
+            &:hover {
+                border-color: blue;
+
+                path {
+                    fill: red
+                }
+
+            }
+        
+
+            
 
         @media screen and (max-width: $tablet) {
             width: 33px;
@@ -729,11 +750,10 @@ body {
         }
 
     }
-}
-
-.footer__bottom {
+    .footer__bottom {
     padding: 24px 0;
     background-color: #2C3154;
+    margin-top: 71px;
 
     @media screen and (max-width: $tablet) {
         padding: 14px 0;
@@ -762,6 +782,9 @@ body {
         color: #ffff;
     }
 }
+}
+
+
 
 .reviews {
     background-color: #5C3249;
@@ -778,8 +801,11 @@ body {
             padding: 0 20px;
         }
     }
+}
+.review{
 
-    .swiper__image {
+
+    &__image {
         width: 100%;
         aspect-ratio: 570/490;
         object-fit: cover;
@@ -795,13 +821,11 @@ body {
 
     }
 
-    .review__content {
-        padding: 116px 0 144px;
+    &__content {
+        padding: 40px 0;
         text-align: left;
 
-        @media screen and (max-width: $tablet) {
-            padding: 110px 0 103px;
-        }
+        
 
         @media screen and (max-width: $mobile) {
             padding: 25px 17px 95px;
@@ -810,21 +834,23 @@ body {
 
     }
 
-    .review__title {
+    &__title {
         width: 100%;
         max-width: 570px;
         font-style: italic;
         color: #FFFFFF;
         @include font(36px, 49px);
         text-transform: capitalize;
+        margin-bottom: 20px;
 
         @media screen and (max-width: $tablet) {
-            @include font(24px, 32px)
+            @include font(24px, 32px);
+            margin-bottom: 8px;
         }
 
         @media screen and (max-width: $mobile) {
             text-align: center;
-            margin-bottom: 15px
+            margin-bottom: 15px;
         }
 
 
@@ -833,7 +859,7 @@ body {
 
     }
 
-    .review__position {
+    &__position {
         color: #FFFFFF;
         @include font(13px, 15px, 700);
         text-transform: uppercase;
@@ -845,6 +871,7 @@ body {
         @media screen and (max-width: $mobile) {
             text-align: center
         }
+    }
     }
 
     .swiper-pagination {
@@ -865,17 +892,21 @@ body {
         width: 14px;
         height: 14px;
         margin: 0 !important;
-        background-color: #7E5D6F;
+        background-color: transparent;
         opacity: 1;
         transition: all 0.3s linear;
+        border: 1px solid #7E5D6F;
 
         @media screen and (max-width: $tablet) {
             width: 9px;
             height: 9px;
+        }
+
+        &-active{
+            background-color: #7E5D6F;
         }
     }
 
 
 
 
-}
