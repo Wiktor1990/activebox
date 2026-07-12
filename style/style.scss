@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 $bg-project: rgba(255, 67, 67, 0.8);
 $gb-color-topfooter: #353C65;
@@ -641,8 +640,8 @@ body {
         }
 
         @media screen and (max-width: $mobile) {
-        grid-template-columns: repeat(1, 1fr);
-                row-gap: 69px;
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 69px;
         }
     }
 
@@ -660,7 +659,7 @@ body {
         }
 
         @media screen and (max-width: $mobile) {
-        padding-bottom: 34px;
+            padding-bottom: 34px;
         }
 
     }
@@ -692,7 +691,7 @@ body {
         }
 
         @media screen and (max-width: $mobile) {
-        padding-bottom: 36px;
+            padding-bottom: 36px;
         }
 
     }
@@ -708,7 +707,7 @@ body {
         }
 
         @media screen and (max-width: $mobile) {
-        column-gap: 16px;
+            column-gap: 16px;
         }
     }
 
@@ -732,7 +731,7 @@ body {
     }
 }
 
-.footer__bottom{
+.footer__bottom {
     padding: 24px 0;
     background-color: #2C3154;
 
@@ -744,22 +743,139 @@ body {
         padding: 29px 0 28px;
     }
 
-    &-container{
+    &-container {
         align-items: center;
         text-align: center;
         justify-content: center;
     }
 
-    &-text{
-        @include font(18px,21px);
+    &-text {
+        @include font(18px, 21px);
         color: #808080;
 
         @media screen and (max-width: $tablet) {
-        @include font(14px,16px)
-    }
+            @include font(14px, 16px)
+        }
     }
 
-    span{
+    span {
         color: #ffff;
     }
+}
+
+.reviews {
+    background-color: #5C3249;
+
+    .review__item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 31px;
+        text-align: center;
+        align-items: center;
+
+        @media screen and (max-width: $mobile) {
+            grid-template-columns: 1fr;
+            padding: 0 20px;
+        }
+    }
+
+    .swiper__image {
+        width: 100%;
+        aspect-ratio: 570/490;
+        object-fit: cover;
+
+        @media screen and (max-width: $tablet) {
+            aspect-ratio: 483/332;
+        }
+
+        @media screen and (max-width: $mobile) {
+            aspect-ratio: 280/218;
+            align-items: center
+        }
+
+    }
+
+    .review__content {
+        padding: 116px 0 144px;
+        text-align: left;
+
+        @media screen and (max-width: $tablet) {
+            padding: 110px 0 103px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            padding: 25px 17px 95px;
+        }
+
+
+    }
+
+    .review__title {
+        width: 100%;
+        max-width: 570px;
+        font-style: italic;
+        color: #FFFFFF;
+        @include font(36px, 49px);
+        text-transform: capitalize;
+
+        @media screen and (max-width: $tablet) {
+            @include font(24px, 32px)
+        }
+
+        @media screen and (max-width: $mobile) {
+            text-align: center;
+            margin-bottom: 15px
+        }
+
+
+
+
+
+    }
+
+    .review__position {
+        color: #FFFFFF;
+        @include font(13px, 15px, 700);
+        text-transform: uppercase;
+
+        @media screen and (max-width: $tablet) {
+            @include font(12px, 14px, 700)
+        }
+
+        @media screen and (max-width: $mobile) {
+            text-align: center
+        }
+    }
+
+    .swiper-pagination {
+        position: static !important;
+        display: flex !important;
+        justify-content: center !important;
+        gap: 12px;
+        width: 100% !important;
+        background-color: #FFFFFF;
+        padding-top: 31px;
+
+        @media screen and (max-width: $tablet) {
+            padding-top: 24px;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        width: 14px;
+        height: 14px;
+        margin: 0 !important;
+        background-color: #7E5D6F;
+        opacity: 1;
+        transition: all 0.3s linear;
+
+        @media screen and (max-width: $tablet) {
+            width: 9px;
+            height: 9px;
+        }
+    }
+
+
+
+
 }
